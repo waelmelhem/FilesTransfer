@@ -58,7 +58,7 @@
                                 <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="4" readonly placeholder="No message ..."style="font-family: 'Open Sans', sans-serif;font-family: 'Quintessential', cursive;font-family: 'Yellowtail', cursive;font-size:18pt;">{{$files_data->message}}</textarea>
                             </div>
                             <H6 style="display: inline">Created By : </H6><span style="font-size:10pt;" class='badge badge-info'>@if(isset($files_data->user_id))
-                            {{$files_data->user_id}}
+                            {{$name->name}}
                             @else
                             {{'unknown'}}
                             @endif

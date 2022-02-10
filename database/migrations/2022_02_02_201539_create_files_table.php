@@ -19,13 +19,13 @@ class CreateFilesTable extends Migration
             $table->primary("file_id");
             $table->string("file_groub");
             $table->foreign("file_groub")
-            ->references("id")
+            ->references("groub_id")
             ->on("files_groubs")
             ->onDelete("cascade")
             ->onUpdate("cascade");
             $table->string('name',255);
             $table->string("mime",127);
-            // $table->timestamps();
+            $table->timestamps();
         });
     }
 

@@ -14,8 +14,8 @@ class CreateFilesGroubsTable extends Migration
     public function up()
     {
         Schema::create('files_groubs', function (Blueprint $table) {
-            $table->string("id");
-            $table->primary('id');
+            $table->string("groub_id");
+            $table->primary('groub_id');
             $table->string("title")->nullable();
             $table->string('password')->nullable();;
             $table->unsignedBigInteger("user_id")->nullable();

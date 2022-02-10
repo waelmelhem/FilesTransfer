@@ -24,6 +24,19 @@ Route::post('/password/check', [FileController::class, 'password_check'])->name(
 Route::get('password/{id}', [FileController::class, 'password'])->name('password');
 Route::post('/dashboard/add', [FileController::class, 'DashAdd'])->name('dashboard.add');
 
+
+Route::get('/dashboard/link', [FileController::class, 'dashLink'])->name('dashboard.links');
+Route::get('/dashboard/MoreInfo/{id}', [FileController::class, 'dashInfo'])->name('dashboard.Info');
+Route::get('/dashboard/edit/{id}', [FileController::class, 'dashEdit'])->name('dashboard.edit');
+Route::get('/dashboard/editFile/{id}/{name}', [FileController::class, 'FileEdit'])->name('File.edit');
+Route::get('/dashboard/deleteFile/{id}', [FileController::class, 'fileDelete'])->name('file.delete');
+Route::post('/dashboard/addFile', [FileController::class, 'fileAdd'])->name('file.add');
+Route::post('/dashboard/edit/link', [FileController::class, 'editlink'])->name('dashboard.edit.link');
+Route::post('/dashboard/delete/link', [FileController::class, 'delete_groub'])->name('dashboard.groub.delete');
+
+//
+//
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->name('dashboard');
